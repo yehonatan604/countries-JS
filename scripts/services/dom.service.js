@@ -12,7 +12,7 @@ searchInput.addEventListener('keyup', (event) => {
         return createCardsList();
     }
     search(event.target.value);
-    return createCardsList();
+    createCardsList();
 });
 
 const createCard = (country) => {

@@ -6,9 +6,10 @@ const getCountries = async () => {
 const countriesFull = await getCountries();
 let countries = [...countriesFull];
 
-const search = (name) => {
+const search = (text) => {
     countries = countries.filter((item) => {
-        return item.name.common.includes(name);
+        const name = item.name.common.toLowerCase();
+        return name.includes(text.toLowerCase());
     })
 }
 
